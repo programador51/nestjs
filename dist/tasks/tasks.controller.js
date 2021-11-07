@@ -21,14 +21,12 @@ let TasksController = class TasksController {
         this.taskService = taskService;
     }
     getTasks() {
-        console.log(process.env.URL_API);
         return this.taskService.getTasks();
     }
     getTask(id) {
         return this.taskService.getTask(+id);
     }
     deleteTask(id) {
-        console.log(id);
         return `Task ${id} deleted`;
     }
     createTask(task) {

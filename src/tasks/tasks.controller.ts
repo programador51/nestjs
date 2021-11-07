@@ -13,7 +13,6 @@ export class TasksController {
 
     @Get()    
     getTasks():ITask[]{
-        console.log(process.env.URL_API);
         return this.taskService.getTasks();
     }
 
@@ -24,7 +23,6 @@ export class TasksController {
     
     @Delete(':id')
     deleteTask(@Param('id')id):string{
-        console.log(id);
         return `Task ${id} deleted`;
     }
 
